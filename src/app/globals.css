@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primaryBgColor: rgba(24, 30, 41, 1);
+  --primaryColor: rgba(255, 255, 255, 1);
+  --primaryBorder: rgba(53, 60, 74, 1);
+  --secondaryColor: rgba(20, 78, 227, 1);
+  --table-head-color: #414141;
+  --pink: #eb568e;
+  --table-head: #181e29;
+  --active-color: #1eb036;
+  --inactive-color: #b0901e;
+  --table-body: #181e2938;
+  --icons-bg-color: rgba(28, 40, 63, 0.69);
+  --icons-color: rgba(201, 206, 214, 1);
+  --active-bg: rgba(30, 176, 54, 0.14);
+  --inactive-bg: rgba(176, 144, 30, 0.19);
+  --hover-color: rgba(20, 78, 227, 0.38);
+  --primary-bg-color: rgba(21, 26, 36, 0.69);
+  --active-bg-color: #1eb03624;
+  --inactive-bg-color: #b0901e30;
+  --history-bg-color: rgba(21, 26, 36, 0.8);
+  --active-icon: #c9ced6;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+html,
+body,
+#root {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  .table-auto .text-[--text-color]:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+body {
+  background-image: url("./assets/Cubes.png"), url("./assets/Swirl.png");
+  background-color: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .via-rgba-11-16-27-57 {
+    --tw-gradient-from: rgba(11, 16, 27, 0.57);
+    --tw-gradient-to: rgba(11, 16, 27, 0);
+    background-image: linear-gradient(
+      180deg,
+      var(--tw-gradient-from),
+      var(--tw-gradient-to)
+    );
+  }
+}
+
+[data-theme="light"] {
+  --active-icon: rgb(12, 30, 71);
+  --background: rgb(255, 255, 255);
+  --primaryBgColor: rgb(255, 255, 255);
+  --table-head: #eeeeee;
+  --table-head-color: #414141;
+  --primaryBorder: rgb(34, 37, 44);
+  --table-body: #ffffff38;
+  --icons-color: rgb(44, 46, 51);
+  --table-body: rgba(101, 118, 150, 0.22);
+  --history-bg-color: rgba(255, 255, 255, 0.8);
+  --primary-bg-color: rgba(255, 255, 255, 0.69);
+  --icons-color: rgb(24, 24, 24);
+}
+
+[data-theme="dark"] {
+  --active-icon: #c9ced6;
+  --background: rgba(11, 16, 27, 1);
+  --primaryBgColor: rgba(24, 30, 41, 1);
+  --primaryColor: rgba(255, 255, 255, 1);
+  --primaryBorder: rgba(53, 60, 74, 1);
+  --secondaryColor: rgba(20, 78, 227, 1);
+  --text-color: rgb(201, 206, 214);
+  --table-head-color: #c9ced6;
+  --pink: #eb568e;
+  --table-head: #181e29;
+  --table-body: #181e2938;
+  --icons-bg-color: rgba(28, 40, 63, 0.69);
+  --icons-color: rgba(201, 206, 214, 1);
+  --hover-color: rgba(20, 78, 227, 0.38);
+  --primary-bg-color: rgba(21, 26, 36, 0.69);
+  --history-bg-color: rgba(21, 26, 36, 0.8);
+}
